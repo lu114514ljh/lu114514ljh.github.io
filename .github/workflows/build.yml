@@ -1,0 +1,35 @@
+name: Hexo Deploy
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 1. 显式安装 pnpm（避免路径问题）
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8  # 与本地版本一致
+
+      # 2. 设置 Node.js 并启用 pnpm 缓存
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      # 3. 安装依赖（严格锁定版本）
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      # 4. 构建与部署
+      - name: Build Hexo
+        run: pnpm run hexo g
+
+      - name: Deploy to GH Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
