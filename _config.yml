@@ -1,7 +1,9 @@
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
-
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
 # Site
 title: lu114514ljh's blog
 subtitle: "welcome to lu114514ljh's blog"
