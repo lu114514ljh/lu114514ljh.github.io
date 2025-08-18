@@ -2,7 +2,7 @@ name: Hexo Deploy
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-11
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,7 +22,7 @@ jobs:
 
       # 3. 安装依赖（严格锁定版本）
       - name: Install Dependencies
-        run: sudo pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       # 4. 构建与部署
       - name: Build Hexo
