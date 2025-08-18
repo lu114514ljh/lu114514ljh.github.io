@@ -22,7 +22,7 @@ jobs:
 
       # 3. 安装依赖（严格锁定版本）
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       # 4. 构建与部署
       - name: Build Hexo
