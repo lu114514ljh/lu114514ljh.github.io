@@ -19,12 +19,12 @@
   <meta name="author" content="lu114514ljh">
   <meta name="keywords" content="blog, 114514, 学习笔记">
   
-    <meta name="description" content="怀念逝去的 LaTeX字符串哈希理论哈希作用为快速比较两个子串是否相同（O(1) 时间复杂度）。 整体核心公式为： Hash[i] &#x3D; ( Hash[i-1] * base + s[i] ) % mod 可以使用 unsigned long long 自然溢出这样就不需要求模。 哈希一般分为两种，一种是前缀哈希，一种是双哈希。 前缀哈希前缀哈希是一种高效的字符串处理技术，主要用于快速计算">
+    <meta name="description" content="怀念逝去的 LaTeXST 表基本概念ST 表（Sparse Table）是一种用于解决静态区间查询问题的数据结构，主要用于处理可重复贡献问题，比如区间最大值（RMQ）、区间最小值、区间 GCD 等。 特性 静态数据结构，建表后不能修改原始数据 预处理时间复杂度：O(n log n) 查询时间复杂度：O(1)  构建步骤1. 预处理对数数组1234lg2[1] &#x3D; 0;for (int i &#x3D; 2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lu114514ljh&#39;s blog">
-<meta property="og:url" content="http://lu114514ljh.github.io/2025/08/18/%E5%AD%97%E7%AC%A6%E5%93%88%E5%B8%8C/index.html">
+<meta property="og:url" content="http://lu114514ljh.github.io/2025/08/18/ST%E8%A1%A8/index.html">
 <meta property="og:site_name" content="lu114514ljh&#39;s blog">
-<meta property="og:description" content="怀念逝去的 LaTeX字符串哈希理论哈希作用为快速比较两个子串是否相同（O(1) 时间复杂度）。 整体核心公式为： Hash[i] &#x3D; ( Hash[i-1] * base + s[i] ) % mod 可以使用 unsigned long long 自然溢出这样就不需要求模。 哈希一般分为两种，一种是前缀哈希，一种是双哈希。 前缀哈希前缀哈希是一种高效的字符串处理技术，主要用于快速计算">
+<meta property="og:description" content="怀念逝去的 LaTeXST 表基本概念ST 表（Sparse Table）是一种用于解决静态区间查询问题的数据结构，主要用于处理可重复贡献问题，比如区间最大值（RMQ）、区间最小值、区间 GCD 等。 特性 静态数据结构，建表后不能修改原始数据 预处理时间复杂度：O(n log n) 查询时间复杂度：O(1)  构建步骤1. 预处理对数数组1234lg2[1] &#x3D; 0;for (int i &#x3D; 2">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-18T13:17:39.837Z">
 <meta property="article:modified_time" content="2025-08-18T13:17:39.837Z">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          546 字
+          599 字
         
       </span>
     
@@ -276,32 +276,43 @@
             
               <div class="markdown-body">
                 
-                <h1 id="怀念逝去的-LaTeX"><a href="#怀念逝去的-LaTeX" class="headerlink" title="怀念逝去的 LaTeX"></a>怀念逝去的 LaTeX</h1><h2 id="字符串哈希理论"><a href="#字符串哈希理论" class="headerlink" title="字符串哈希理论"></a>字符串哈希理论</h2><p>哈希作用为快速比较两个子串是否相同（O(1) 时间复杂度）。</p>
-<p>整体核心公式为：</p>
-<p>Hash[i] &#x3D; ( Hash[i-1] * base + s[i] ) % mod</p>
-<p>可以使用 <code>unsigned long long</code> 自然溢出这样就不需要求模。</p>
-<p>哈希一般分为两种，一种是前缀哈希，一种是双哈希。</p>
-<h3 id="前缀哈希"><a href="#前缀哈希" class="headerlink" title="前缀哈希"></a>前缀哈希</h3><p>前缀哈希是一种高效的字符串处理技术，主要用于快速计算任意子串的哈希值。</p>
-<p>通过预处理字符串，构建一个前缀哈希数组，使得可以在 O(1) 时间内计算任意子串的哈希值。</p>
-<p>对于字符串 s，前缀哈希的计算：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">h[i]=(h[i<span class="hljs-number">-1</span>]*base+s[i])%mod;<br>p[i]=p[i<span class="hljs-number">-1</span>]*base%mod; <span class="hljs-comment">// 存储base的幂次</span><br></code></pre></td></tr></table></figure>
-
-<p><strong>前缀哈希的实现</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">define</span> int unsigned long long</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> p 131 <span class="hljs-comment">// 进制基数，通常可以使用 131、13331</span></span><br><span class="hljs-type">int</span> Hash[<span class="hljs-number">100005</span>],p[<span class="hljs-number">100005</span>];<span class="hljs-comment">// h存储哈希值，p存储P的幂次</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">(string s)</span></span>&#123;<br>	p[<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>	<span class="hljs-type">int</span> len=s.<span class="hljs-built_in">size</span>();<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=len;i++)&#123;<br>		Hash[i]=Hash[i<span class="hljs-number">-1</span>]*p+s[i<span class="hljs-number">-1</span>];<br>		p[i]=p[i<span class="hljs-number">-1</span>]*p;<br>		<span class="hljs-comment">/*</span><br><span class="hljs-comment">		如果不使用 unsigned long long，使用 long long，就不能让程序自然溢出，需要对数组进行取模。</span><br><span class="hljs-comment">		*/</span><br>	&#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">get_hash</span><span class="hljs-params">(<span class="hljs-type">int</span> l,<span class="hljs-type">int</span> r)</span></span>&#123;<br>	<span class="hljs-keyword">return</span> h[r]-h[l<span class="hljs-number">-1</span>]*p[r-l<span class="hljs-number">+1</span>];<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="双哈希"><a href="#双哈希" class="headerlink" title="双哈希"></a>双哈希</h3><p>双哈希是一种用于解决哈希冲突的高级技术，比单一哈希更可靠。</p>
-<p>双哈希能够能产生更均匀的探测序列，减少聚集现象，提供更好的分布特性。</p>
-<p>双哈希使用两个不同的哈希函数来解决冲突：</p>
-<ul>
-<li>第一个哈希函数计算初始位置：<code>h1(key)</code></li>
-<li>第二个哈希函数计算步长：<code>h2(key)</code></li>
-<li>当发生冲突时，探测序列为：<code>(h1(key)+i*h2(key))%size</code>，其中 i 是尝试次数。</li>
+                <h1 id="怀念逝去的-LaTeX"><a href="#怀念逝去的-LaTeX" class="headerlink" title="怀念逝去的 LaTeX"></a>怀念逝去的 LaTeX</h1><h1 id="ST-表基本概念"><a href="#ST-表基本概念" class="headerlink" title="ST 表基本概念"></a>ST 表基本概念</h1><p>ST 表（Sparse Table）是一种用于解决静态区间查询问题的数据结构，主要用于处理可重复贡献问题，比如区间最大值（RMQ）、区间最小值、区间 GCD 等。</p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li>静态数据结构，建表后不能修改原始数据</li>
+<li>预处理时间复杂度：O(n log n)</li>
+<li>查询时间复杂度：O(1)</li>
 </ul>
-<p><strong>实现方式</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">define</span> int unsigned long long</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> p1 131</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> p2 13331</span><br><span class="hljs-type">int</span> h1[<span class="hljs-number">100005</span>],h2[<span class="hljs-number">100005</span>],pow1[<span class="hljs-number">100005</span>],pow2[<span class="hljs-number">100005</span>];<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">(string s)</span></span>&#123;<br>	pow1[<span class="hljs-number">0</span>]=pow2[<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>	<span class="hljs-type">int</span> len=s.<span class="hljs-built_in">size</span>();<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=len;i++)&#123;<br>		h1[i]=h1[i<span class="hljs-number">-1</span>]*p1+s[i<span class="hljs-number">-1</span>];<br>		h2[i]=h2[i<span class="hljs-number">-1</span>]*p2+s[i<span class="hljs-number">-1</span>];<br>		pow1[i]=pow1[i<span class="hljs-number">-1</span>]*p1;<br>		pow2[i]=pow2[i<span class="hljs-number">-1</span>]*p2;<br>	&#125;<br>&#125;<br><span class="hljs-function">pair&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt; <span class="hljs-title">get_hash</span><span class="hljs-params">(<span class="hljs-type">int</span> l,<span class="hljs-type">int</span> r)</span></span>&#123;<br>	<span class="hljs-type">int</span> hash1=h1[r]-h1[l<span class="hljs-number">-1</span>]*pow1[r-l<span class="hljs-number">+1</span>];<br>	<span class="hljs-type">int</span> hash2=h2[r]-h2[l<span class="hljs-number">-1</span>]*pow2[r-l<span class="hljs-number">+1</span>];<br>	<span class="hljs-keyword">return</span> &#123;hash1,hash2&#125;;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="构建步骤"><a href="#构建步骤" class="headerlink" title="构建步骤"></a>构建步骤</h2><h3 id="1-预处理对数数组"><a href="#1-预处理对数数组" class="headerlink" title="1. 预处理对数数组"></a>1. 预处理对数数组</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp">lg2[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; i++) &#123;<br>    lg2[i] = lg2[i / <span class="hljs-number">2</span>] + <span class="hljs-number">1</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>这个预处理可以在 O(1) 时间内找到任意区间长度对应的最大幂次。</p>
+<h3 id="2-初始化-ST-表"><a href="#2-初始化-ST-表" class="headerlink" title="2. 初始化 ST 表"></a>2. 初始化 ST 表</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) &#123;<br>    st_max[i][<span class="hljs-number">0</span>] = arr[i];  <span class="hljs-comment">// 区间长度为 1 时的最大值就是元素本身</span><br>    st_min[i][<span class="hljs-number">0</span>] = arr[i];  <span class="hljs-comment">// 同理最小值</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
+<h3 id="3-动态规划填充-ST-表"><a href="#3-动态规划填充-ST-表" class="headerlink" title="3. 动态规划填充 ST 表"></a>3. 动态规划填充 ST 表</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt; <span class="hljs-number">20</span>; j++) &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i + (<span class="hljs-number">1</span> &lt;&lt; j) - <span class="hljs-number">1</span> &lt;= n; i++) &#123;<br>        st_max[i][j] = <span class="hljs-built_in">max</span>(st_max[i][j - <span class="hljs-number">1</span>], st_max[i + (<span class="hljs-number">1</span> &lt;&lt; (j - <span class="hljs-number">1</span>))][j - <span class="hljs-number">1</span>]);<br>        st_min[i][j] = <span class="hljs-built_in">min</span>(st_min[i][j - <span class="hljs-number">1</span>], st_min[i + (<span class="hljs-number">1</span> &lt;&lt; (j - <span class="hljs-number">1</span>))][j - <span class="hljs-number">1</span>]);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>使用倍增思想，每个状态 st[i][j] 表示从 i 开始，长度为 2^j 的区间的极值。</p>
+<h2 id="查询操作"><a href="#查询操作" class="headerlink" title="查询操作"></a>查询操作</h2><p>查询区间 [l, r] 的最大值：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">query_max</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>&#123;<br>    <span class="hljs-type">int</span> k = lg2[r - l + <span class="hljs-number">1</span>];  <span class="hljs-comment">// 找到最大的 k 使得 2^k &lt;= 区间长度</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span>(st_max[l][k], st_max[r - (<span class="hljs-number">1</span> &lt;&lt; k) + <span class="hljs-number">1</span>][k]);<br>&#125;<br></code></pre></td></tr></table></figure>
 
-
+<h2 id="正确性原理"><a href="#正确性原理" class="headerlink" title="正确性原理"></a>正确性原理</h2><p>ST 表查询的正确性基于两个关键性质：</p>
+<ol>
+<li><p>区间覆盖性：</p>
+<ul>
+<li>对于任意区间 [l, r]，我们选择两个子区间 [l, l + 2^k - 1] 和 [r - 2^k + 1, r]</li>
+<li>这两个子区间必定完全覆盖原区间 [l, r]</li>
+<li>其中 k 是满足 2^k &lt;&#x3D; r - l + 1 的最大整数</li>
+</ul>
+</li>
+<li><p>可重复贡献性：</p>
+<ul>
+<li>对于最大值运算 max，满足：<ul>
+<li>max(a, a) &#x3D; a （幂等性）</li>
+<li>max(a, b) &#x3D; max(b, a) （交换律）</li>
+<li>max(a, max(b, c)) &#x3D; max(max(a, b), c) （结合律）</li>
+</ul>
+</li>
+<li>这使得可以安全地计算重叠区间的最大值而不影响最终结果</li>
+</ul>
+</li>
+</ol>
+<h2 id="RMQ-模板代码"><a href="#RMQ-模板代码" class="headerlink" title="RMQ 模板代码"></a>RMQ 模板代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> </span>&#123;<br>    lg2[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; i++) &#123;<br>        lg2[i] = lg2[i / <span class="hljs-number">2</span>] + <span class="hljs-number">1</span>;<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= <span class="hljs-number">20</span>; j++) &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i + (<span class="hljs-number">1</span> &lt;&lt; j) - <span class="hljs-number">1</span> &lt;= n; i++) &#123;<br>            st[i][j] = <span class="hljs-built_in">min</span>(st[i][j - <span class="hljs-number">1</span>], st[i + (<span class="hljs-number">1</span> &lt;&lt; (j - <span class="hljs-number">1</span>))][j - <span class="hljs-number">1</span>]);<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">query</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span> </span>&#123;<br>    <span class="hljs-type">int</span> k = lg2[r - l + <span class="hljs-number">1</span>];<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">min</span>(st[l][k], st[r - (<span class="hljs-number">1</span> &lt;&lt; k) + <span class="hljs-number">1</span>][k]);<br>&#125;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -319,7 +330,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div></div>
-      <div>http://lu114514ljh.github.io/2025/08/18/字符哈希/</div>
+      <div>http://lu114514ljh.github.io/2025/08/18/ST表/</div>
     </div>
     <div class="license-meta">
       
@@ -363,15 +374,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/18/hello-world/" title="Hello World">
+                      <a href="/2025/08/18/8.12%E5%B0%8F%E6%B5%8B/" title="">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hello World</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2025/08/18/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
