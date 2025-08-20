@@ -1,4 +1,8 @@
-﻿# 怀念逝去的 LaTeX
+---
+title: ST 表
+date: 2025/8/14 21:13:55
+---
+# 怀念逝去的 LaTeX
 
 # ST 表基本概念
 
@@ -83,4 +87,5 @@ int query(int l, int r) {
     int k = lg2[r - l + 1];
     return min(st[l][k], st[r - (1 << k) + 1][k]);
 }
+
 ```
