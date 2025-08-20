@@ -1,6 +1,10 @@
 ---
 title: ST 表
 date: 2025/8/14 21:13:55
+tags: 
+  - C++
+  - 笔记
+  - 算法
 ---
 # 怀念逝去的 LaTeX
 
@@ -89,3 +93,4 @@ int query(int l, int r) {
 }
 
 ```
+
