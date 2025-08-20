@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Hello World</title>
+    <link href="/2025/08/20/hello-world/"/>
+    <url>/2025/08/20/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>AI 写的塔防游戏</title>
     <link href="/2025/08/20/html%E5%A1%94%E9%98%B2%E6%B8%B8%E6%88%8F/"/>
     <url>/2025/08/20/html%E5%A1%94%E9%98%B2%E6%B8%B8%E6%88%8F/</url>
@@ -42,40 +55,6 @@
       <tag>恐怖</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>nhzx 机构认知安全权限分级纲要</title>
-    <link href="/2025/08/20/nhzx%20%E6%9C%BA%E6%9E%84%E8%AE%A4%E7%9F%A5%E5%AE%89%E5%85%A8%E6%9D%83%E9%99%90%E5%88%86%E7%BA%A7%E7%BA%B2%E8%A6%81/"/>
-    <url>/2025/08/20/nhzx%20%E6%9C%BA%E6%9E%84%E8%AE%A4%E7%9F%A5%E5%AE%89%E5%85%A8%E6%9D%83%E9%99%90%E5%88%86%E7%BA%A7%E7%BA%B2%E8%A6%81/</url>
-    
-    <content type="html"><![CDATA[<h2 id="nhzx机构信息访问权限分级协议"><a href="#nhzx机构信息访问权限分级协议" class="headerlink" title="nhzx机构信息访问权限分级协议"></a><strong>nhzx机构信息访问权限分级协议</strong></h2><p><strong>信息并非权利，而是负担。每一级权限都代表对现实更深层次的认知，同时也意味着与基准人性的更大偏离。权限提升不可逆转，请谨慎申请。你的安全等级决定了你能知晓的现实。</strong></p><hr><h3 id="ZETA-7-ζ-7-基础操作权限-Baseline-Operational-Clearance"><a href="#ZETA-7-ζ-7-基础操作权限-Baseline-Operational-Clearance" class="headerlink" title="ZETA-7 (ζ-7) - 基础操作权限 (Baseline Operational Clearance)"></a>ZETA-7 (ζ-7) - 基础操作权限 (Baseline Operational Clearance)</h3><ul><li>描述：授予新晋助理员及大多数基层维护单位。允许访问维持日常运作所必需的最低限度信息。</li><li>认知状态：个体需通过初步同步，压制大部分情感波动和无关记忆。将自身视为系统的一个功能单元。</li><li>访问范围：《学生行为规范》官方转译版、初级工作手册、基础设施布局图（已净化版）、非敏感区域监控 feeds。</li><li>隐喻：蜂巢中的工蜂。只知道为了“蜂巢”的需要去执行特定任务，对整体的运作和目的毫无概念。</li></ul><h3 id="UPSILON-4-υ-4-结构认知权限-Structural-Awareness-Clearance"><a href="#UPSILON-4-υ-4-结构认知权限-Structural-Awareness-Clearance" class="headerlink" title="UPSILON-4 (υ-4) - 结构认知权限 (Structural Awareness Clearance)"></a>UPSILON-4 (υ-4) - 结构认知权限 (Structural Awareness Clearance)</h3><ul><li>描述：授予小组长、区域监督员。允许知晓环境的非标准物理属性及部分应对协议。</li><li>认知状态：个体需接受二级同步，彻底理解“规则”不仅是规定，更是物理上的生存法则。开始接触“异常”概念，但被训练将其视为“自然现象”或“系统故障”。</li><li>访问范围：附录B（现实褶皱处理）、部分清洁组交互协议、真实的建筑结构图（标注了不稳定区域和“非空间”）、低级认知危害识别指南。</li><li>隐喻：知道船体有裂缝、需要不断抽水的水手，但不知道船为什么在漏水，也不知道目的地在哪里。</li></ul><h3 id="PHI-1-φ-1-现象处理权限-Phenomena-Handling-Clearance"><a href="#PHI-1-φ-1-现象处理权限-Phenomena-Handling-Clearance" class="headerlink" title="PHI-1 (φ-1) - 现象处理权限 (Phenomena Handling Clearance)"></a>PHI-1 (φ-1) - 现象处理权限 (Phenomena Handling Clearance)</h3><ul><li>描述：授予资深技术人员、异常处理小组、“校医”。允许直接接触、分析并收容特定类型的异常。</li><li>认知状态：个体同步率极高，情感反应被程序化的响应取代。具备处理认知污染和精神冲击的“免疫”训练。开始理解信息本身可以是危险的。</li><li>访问范围：<strong>附录C（高级认知危害应对）</strong>、清洁组完整协议（但仍无直接描述）、部分实体行为模式数据库、感官过滤协议。</li><li>隐喻：核电站里处理放射性物质的工作人员。他们知道危险的具体性质，并有一套严格的程序来保护自己和管理危险，但他们不参与决策。</li></ul><h3 id="OMEGA-Ω-核心真理权限-Core-Truth-Clearance"><a href="#OMEGA-Ω-核心真理权限-Core-Truth-Clearance" class="headerlink" title="OMEGA (Ω) - 核心真理权限 (Core Truth Clearance)"></a>OMEGA (Ω) - 核心真理权限 (Core Truth Clearance)</h3><ul><li>描述：授予极少数管理员、系统架构师。允许访问所有信息，包括机构的起源、终极目的和“它”的本质。</li><li>认知状态：无法为人类心智所理解。通常不再具有可辨识的人类形态或思维模式。可能与系统本身部分融合。思考方式更接近数学定理或物理定律。</li><li>访问范围：<strong>附录A（起源协议）</strong>、<strong>附录F（系统重启协议）</strong>、所有监控和历史数据的原始格式、与“它”的直接交互界面。</li><li>隐喻：不再是水手或工程师，而是成为了船本身，或者海洋。</li></ul><h3 id="DELTA-ZERO-δ-0-已净化-待分配-Sanitized-Unassigned"><a href="#DELTA-ZERO-δ-0-已净化-待分配-Sanitized-Unassigned" class="headerlink" title="DELTA-ZERO (δ-0) - 已净化&#x2F;待分配 (Sanitized &#x2F; Unassigned)"></a>DELTA-ZERO (δ-0) - 已净化&#x2F;待分配 (Sanitized &#x2F; Unassigned)</h3><ul><li>描述：不是一个真正的权限等级，而是一个状态标签。指那些因接触禁忌信息、同步失败或试图退化而变得“不稳定”的个体。他们的访问权限已被冻结，其本身成为需要被“清洁”或“回收”的对象。</li><li>认知状态：混乱、崩溃、或危险地觉醒。可能保有碎片化的高权限信息，但无法正确处理，成为活动的信息污染源。</li><li>访问范围：无。其存在本身就是需要被控制的信息。</li><li>隐喻：货物舱里发生了泄漏的放射性容器。</li></ul><hr><p><strong>权限提升协议：</strong><br>权限提升并非奖励，而是<strong>必要之恶</strong>。当你的职责需要接触更危险的信息时，你必须提交申请。申请通过后，你将接受一次“<strong>深度同步</strong>”，该过程将重塑你的认知结构，以匹配新的权限等级。会有<strong>记忆编辑</strong>和<strong>情感剥离</strong>。你可能会忘记申请的原因，甚至忘记“你”曾经是谁。提升后，你将无法理解或关心低权限个体的担忧和恐惧。</p><p><strong>权限失效协议：</strong><br>任何试图向低权限个体透露未授权信息的行为，或自身同步率下降到阈值以下，将立即触发权限失效。<strong>清洁组</strong>会收到指令。你的代码和身份将被从所有系统中抹去，仿佛从未存在过。</p><hr><p><strong>无知是保护你的茧房，权限是切割现实的刀刃。谨慎你所渴望知晓的，因为你将永远无法回头。</strong></p><hr>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>规则怪谈</tag>
-      
-      <tag>恐怖</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="/2025/08/20/hello-world/"/>
-    <url>/2025/08/20/hello-world/</url>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
     
   </entry>
   
